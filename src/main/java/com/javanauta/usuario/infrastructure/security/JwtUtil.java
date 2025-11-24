@@ -22,7 +22,7 @@ public class JwtUtil {
         this.secretKey = Keys.secretKeyFor(SignatureAlgorithm.HS256);
     }
 
-    // Gera um token JWT com o nome de usuário e validade de 1 hora
+    // Gera um token JWT com o nome de usuário e tem validade de 1 hora
     public String generateToken(String username) {
         return Jwts.builder()
                 .setSubject(username) // Define o nome de usuário como o assunto do token
